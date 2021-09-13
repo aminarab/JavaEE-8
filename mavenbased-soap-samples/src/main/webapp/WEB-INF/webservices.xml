@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<webservices xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1">
+  <webservice-description>
+    <webservice-description-name>MyWebService</webservice-description-name>
+    <port-component>
+      <port-component-name>MyWebServiceSoapPort</port-component-name>
+      <wsdl-port xmlns:an="http://ir.amin.mavenbased.soap.samples/">an:MyWebServiceSoapPort</wsdl-port>
+      <service-endpoint-interface>ir.amin.mavenbased.soap.samples.HelloService</service-endpoint-interface>
+      <service-impl-bean>
+        <servlet-link>serviceServlet</servlet-link>
+      </service-impl-bean>
+    </port-component>
+  </webservice-description>
+</webservices>

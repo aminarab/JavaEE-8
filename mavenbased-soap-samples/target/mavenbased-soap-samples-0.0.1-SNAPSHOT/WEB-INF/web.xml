@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4" id="WebApp_ID">
+  <display-name>MyWebService</display-name>
+  <servlet>
+    <servlet-name>serviceServlet</servlet-name>
+    <servlet-class>ir.amin.mavenbased.soap.samples.HelloServiceImpl</servlet-class>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>serviceServlet</servlet-name>
+    <url-pattern>/Service</url-pattern>
+  </servlet-mapping> 
+</web-app>
