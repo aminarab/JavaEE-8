@@ -1,0 +1,8 @@
+ir\amin\mavenbased\war\samples\HelloWorldServlet.class
+ir\amin\mavenbased\war\samples\catalog\AsyncCatalogServlet$1.class
+ir\amin\mavenbased\war\samples\catalog\CatalogServlet.class
+ir\amin\mavenbased\war\samples\catalog\ParameterLoggingFilter.class
+ir\amin\mavenbased\war\samples\catalog\AsyncCatalogServlet.class
+ir\amin\mavenbased\war\samples\catalog\Catalog.class
+ir\amin\mavenbased\war\samples\catalog\JSPCatalogServlet.class
+ir\amin\mavenbased\war\samples\catalog\CatalogItem.class

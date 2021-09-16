@@ -12,12 +12,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import ir.amin.mavenbased.ejb.samples.Hello;
+import ir.amin.mavenbased.ejb.samples.interfaces.HelloLocal;
+
 
 public class HelloWorldServlet extends HttpServlet {
 
+	private static final long serialVersionUID = 1L;
+
 	@EJB
-	private Hello hello;
+	private HelloLocal helloLocal;
 	
 	private String message;
 
@@ -43,7 +46,7 @@ public class HelloWorldServlet extends HttpServlet {
 		}
         
 		
-		out.println("<h1>" + message + hello.sayHello() + " "+name+"</h1>");
+		out.println("<h1>" + message  + helloLocal.sayHello() + " "+name+"</h1>");
 	}
 
 	/**

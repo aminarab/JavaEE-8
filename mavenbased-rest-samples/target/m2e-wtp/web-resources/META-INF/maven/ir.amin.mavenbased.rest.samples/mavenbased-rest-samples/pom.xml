@@ -17,8 +17,14 @@
 			<scope>provided</scope>
 		</dependency>
 		
-		
-		
+  
+		<dependency>
+			<groupId>ir.amin.mavenbased.ejb.samples</groupId>
+			<artifactId>mavenbased-ejb-samples</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>ejb</type>
+			<scope>provided</scope>
+		</dependency> 
   
   </dependencies>
 </project>

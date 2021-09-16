@@ -22,5 +22,11 @@
       <context-root>/rest</context-root>
     </web>
   </module>
+  <module>
+    <web>
+      <web-uri>mavenbased-jsf-samples-0.0.1-SNAPSHOT.war</web-uri>
+      <context-root>/faces</context-root>
+    </web>
+  </module>
   <library-directory>lib</library-directory>
 </application>

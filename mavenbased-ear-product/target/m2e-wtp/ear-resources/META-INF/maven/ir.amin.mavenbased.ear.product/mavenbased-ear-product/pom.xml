@@ -40,6 +40,12 @@
 			<version>0.0.1-SNAPSHOT</version>
 			<type>war</type>
 		</dependency>
+		<dependency>
+			<groupId>ir.amin.mavenbased.jsf.samples</groupId>
+			<artifactId>mavenbased-jsf-samples</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>war</type>
+		</dependency> 
 	</dependencies>
 
 	<build>
@@ -79,6 +85,12 @@
 							<artifactId>mavenbased-rest-samples</artifactId>
 							<bundleDir>/</bundleDir>
 							<contextRoot>/rest</contextRoot>
+						</webModule>
+						<webModule>
+							<groupId>ir.amin.mavenbased.jsf.samples</groupId>
+							<artifactId>mavenbased-jsf-samples</artifactId>
+							<bundleDir>/</bundleDir>
+							<contextRoot>/faces</contextRoot>
 						</webModule>
 					</modules>
 				</configuration>

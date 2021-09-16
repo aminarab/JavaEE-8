@@ -11,7 +11,7 @@ import junit.framework.TestCase;
 /**
  * @version $Revision$ $Date$
  */
-public class HelloTest extends TestCase {
+public class HelloTest  extends TestCase {
 
     public void test() throws Exception {
         Properties properties = new Properties();

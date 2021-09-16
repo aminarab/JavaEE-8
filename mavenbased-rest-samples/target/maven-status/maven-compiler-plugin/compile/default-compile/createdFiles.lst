@@ -1,0 +1,9 @@
+ir\amin\mavenbased\rest\samples\scopes\ScopePOJO.class
+ir\amin\mavenbased\rest\samples\scopes\ApplicationScopePOJO.class
+ir\amin\mavenbased\rest\samples\scopes\RequestScopePOJO.class
+ir\amin\mavenbased\rest\samples\scopes\SessionScopePOJO.class
+ir\amin\mavenbased\rest\samples\controllers\MultiThreadController.class
+ir\amin\mavenbased\rest\samples\controllers\ScopesController.class
+ir\amin\mavenbased\rest\samples\controllers\InventoryItemEndpoint.class
+ir\amin\mavenbased\rest\samples\InventoryItem.class
+ir\amin\mavenbased\rest\samples\SampleRESTApplication.class

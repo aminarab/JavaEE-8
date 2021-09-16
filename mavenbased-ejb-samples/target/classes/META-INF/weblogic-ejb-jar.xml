@@ -20,7 +20,7 @@
     "http://www.bea.com/servers/wls700/dtd/weblogic-ejb-jar.dtd">
 <weblogic-ejb-jar>
   <weblogic-enterprise-bean>
-    <ejb-name>HelloImpl</ejb-name>
+    <ejb-name>Hello</ejb-name>
     <local-jndi-name>MyHello</local-jndi-name>
   </weblogic-enterprise-bean>
 </weblogic-ejb-jar>
