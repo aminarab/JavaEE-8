@@ -16,4 +16,13 @@ public class HelloServiceImpl implements HelloService {
 		return "Welcome "  + helloLocal.sayHello()  + " " + name;
 
 	}
+
+	public SumResponse sumNumbers(SumRequest sumRequest) {
+		SumResponse sumResponse = new  SumResponse();
+		
+		sumResponse.setTotal(sumRequest.getNumber1() + sumRequest.getNumber2());
+		return sumResponse;
+	}
+	
+	
 }

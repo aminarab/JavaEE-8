@@ -8,4 +8,7 @@ public interface HelloService {
 
 	@WebMethod(operationName = "hello")
 	public String hello(String name);
+	
+	@WebMethod(operationName = "sumNumbers")
+	public SumResponse sumNumbers(SumRequest sumRequest);
 }
