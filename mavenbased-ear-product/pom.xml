@@ -16,6 +16,11 @@
 			<version>1.7.30</version>
 		</dependency> -->
 		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>8.0</version>
+		</dependency>
+		<dependency>
 			<groupId>ir.amin.mavenbased.jar.samples</groupId>
 			<artifactId>mavenbased-jar-samples</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
@@ -24,6 +29,12 @@
 		<dependency>
 			<groupId>ir.amin.mavenbased.ejb.samples</groupId>
 			<artifactId>mavenbased-ejb-samples</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<type>ejb</type>
+		</dependency>
+		<dependency>
+			<groupId>ir.amin.mavenbased.jpa.samples</groupId>
+			<artifactId>mavenbased-jpa-samples</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<type>ejb</type>
 		</dependency>
@@ -67,12 +78,17 @@
 					<filtering>true</filtering>
 
 					<modules>
+					
 						<ejbModule>
 							<groupId>ir.amin.mavenbased.ejb.samples</groupId>
 							<artifactId>mavenbased-ejb-samples</artifactId>
 							<bundleDir>/</bundleDir>
 						</ejbModule>
-
+						<ejbModule>
+							<groupId>ir.amin.mavenbased.jpa.samples</groupId>
+							<artifactId>mavenbased-jpa-samples</artifactId>
+							<bundleDir>/</bundleDir>
+						</ejbModule>
 						<webModule>
 							<groupId>ir.amin.mavenbased.war.samples</groupId>
 							<artifactId>mavenbased-war-samples</artifactId>
