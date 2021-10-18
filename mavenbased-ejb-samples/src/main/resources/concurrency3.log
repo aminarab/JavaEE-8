@@ -1,0 +1,201 @@
+.
+.
+JAVA Memory arguments: -Xms256m -Xmx512m -XX:CompileThreshold=8000
+.
+CLASSPATH=C:\PROGRA~1\Java\JDK18~1.0_3\lib\tools.jar;G:\weblogic\Oracle\Middleware\Oracle_Home\wlserver\server\lib\weblogic.jar;G:\weblogic\Oracle\Middleware\Oracle_Home\oracle_common\modules\thirdparty\ant-contrib-1.0b3.jar;G:\weblogic\Oracle\Middleware\Oracle_Home\wlserver\modules\features\oracle.wls.common.nodemanager.jar;G:\weblogic\Oracle\Middleware\Oracle_Home\wlserver\common\derby\lib\derbynet.jar;G:\weblogic\Oracle\Middleware\Oracle_Home\wlserver\common\derby\lib\derbyclient.jar;G:\weblogic\Oracle\Middleware\Oracle_Home\wlserver\common\derby\lib\derby.jar
+.
+PATH=G:\weblogic\Oracle\Middleware\Oracle_Home\user_projects\domains\base_domain\bin;;G:\weblogic\Oracle\Middleware\Oracle_Home\wlserver\server\native\win\x64;G:\weblogic\Oracle\Middleware\Oracle_Home\wlserver\server\bin;G:\weblogic\Oracle\Middleware\Oracle_Home\oracle_common\modules\thirdparty\org.apache.ant\1.9.8.0.0\apache-ant-1.9.8\bin;C:\PROGRA~1\Java\JDK18~1.0_3\jre\bin;C:\PROGRA~1\Java\JDK18~1.0_3\bin;G:\weblogic\Oracle\Middleware\Oracle_Home\wlserver\server\native\win\x64\oci920_8;C:\Windows\System32;C:\Windows;C:\Windows\System32\wbem;C:\Windows\System32\WINDOW~1\v1.0\;C:\Windows\System32\OpenSSH\;C:\PROGRA~2\NVIDIA~1\PhysX\Common;C:\PROGRA~1\Java\JDK18~1.0_3\bin;D:\run\mvn\apache-maven-3.6.3\bin;C:\PROGRA~1\nodejs\;C:\PROGRA~1\Git\cmd;C:\PROGRA~1\Docker\Docker\RESOUR~1\bin;C:\PROGRA~3\DOCKER~1\VERSIO~1;C:\PROGRA~1\PuTTY\;C:\Users\aminarab\AppData\Local\MICROS~1\WINDOW~1;C:\Users\aminarab\AppData\Roaming\npm
+.
+***************************************************
+*  To start WebLogic Server, use a username and   *
+*  password assigned to an admin-level user.  For *
+*  server administration, use the WebLogic Server *
+*  console at http:\\hostname:port\console        *
+***************************************************
+Starting WLS with line:
+C:\PROGRA~1\Java\JDK18~1.0_3\bin\java -server -Xdebug -Xnoagent -Xrunjdwp:transport=dt_socket,address=8453,server=y,suspend=n -Djava.compiler=NONE  -Xms256m -Xmx512m -XX:CompileThreshold=8000 -cp G:\weblogic\Oracle\Middleware\Oracle_Home\wlserver\server\lib\weblogic-launcher.jar -Dlaunch.use.env.classpath=true -Dweblogic.Name=AdminServer -Djava.security.policy=G:\weblogic\Oracle\Middleware\Oracle_Home\wlserver\server\lib\weblogic.policy -Djava.system.class.loader=com.oracle.classloader.weblogic.LaunchClassLoader  -javaagent:G:\weblogic\Oracle\Middleware\Oracle_Home\wlserver\server\lib\debugpatch-agent.jar -ea -da:com.bea... -da:javelin... -da:weblogic... -ea:com.bea.wli... -ea:com.bea.broker... -ea:com.bea.sbconsole... -Dwls.home=G:\weblogic\Oracle\Middleware\Oracle_Home\wlserver\server -Dweblogic.home=G:\weblogic\Oracle\Middleware\Oracle_Home\wlserver\server      weblogic.Server
+Listening for transport dt_socket at address: 8453
+<Sep 15, 2021 6:50:52 PM IRDT> <Info> <Security> <BEA-090905> <Disabling the CryptoJ JCE Provider self-integrity check for better startup performance. To enable this check, specify -Dweblogic.security.allowCryptoJDefaultJCEVerification=true.>
+<Sep 15, 2021 6:50:52 PM IRDT> <Info> <Security> <BEA-090906> <Changing the default Random Number Generator in RSA CryptoJ from ECDRBG128 to HMACDRBG. To disable this change, specify -Dweblogic.security.allowCryptoJDefaultPRNG=true.>
+<Sep 15, 2021 6:50:53 PM IRDT> <Info> <WebLogicServer> <BEA-000377> <Starting WebLogic Server with Java HotSpot(TM) 64-Bit Server VM Version 25.301-b09 from Oracle Corporation.>
+<Sep 15, 2021 6:50:53 PM IRDT> <Info> <RCM> <BEA-2165021> <"ResourceManagement" is not enabled in this JVM. Enable "ResourceManagement" to use the WebLogic Server "Resource Consumption Management" feature. To enable "ResourceManagement", you must specify the following JVM options in the WebLogic Server instance in which the JVM runs: -XX:+UnlockCommercialFeatures -XX:+ResourceManagement.>
+<Sep 15, 2021 6:50:53 PM IRDT> <Info> <Management> <BEA-141107> <Version: WebLogic Server 12.2.1.3.0 Thu Aug 17 13:39:49 PDT 2017 1882952>
+<Sep 15, 2021 6:50:55 PM IRDT> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to STARTING.>
+<Sep 15, 2021 6:50:55 PM IRDT> <Info> <WorkManager> <BEA-002900> <Initializing self-tuning thread pool.>
+<Sep 15, 2021 6:50:55 PM IRDT> <Info> <WorkManager> <BEA-002942> <CMM memory level becomes 0. Setting standby thread pool size to 256.>
+<Sep 15, 2021 6:50:56,584 PM IRDT> <Notice> <Log Management> <BEA-170019> <The server log file weblogic.logging.FileStreamHandler instance=1474462647
+Current log file=G:\weblogic\Oracle\Middleware\Oracle_Home\user_projects\domains\base_domain\servers\AdminServer\logs\AdminServer.log
+Rotation dir=G:\weblogic\Oracle\Middleware\Oracle_Home\user_projects\domains\base_domain\servers\AdminServer\logs
+ is opened. All server side log events will be written to this file.>
+<Sep 15, 2021 6:50:56,949 PM IRDT> <Notice> <Security> <BEA-090946> <Security pre-initializing using security realm: myrealm>
+<Sep 15, 2021 6:50:57,649 PM IRDT> <Notice> <Security> <BEA-090947> <Security post-initializing using security realm: myrealm>
+<Sep 15, 2021 6:50:58,817 PM IRDT> <Notice> <Security> <BEA-090082> <Security initialized using administrative security realm: myrealm>
+<Sep 15, 2021 6:50:59,220 PM IRDT> <Notice> <JMX> <BEA-149512> <JMX Connector Server started at service:jmx:iiop://192.168.1.101:7001/jndi/weblogic.management.mbeanservers.runtime.>
+<Sep 15, 2021 6:51:00,008 PM IRDT> <Notice> <JMX> <BEA-149512> <JMX Connector Server started at service:jmx:iiop://192.168.1.101:7001/jndi/weblogic.management.mbeanservers.domainruntime.>
+<Sep 15, 2021 6:51:00,085 PM IRDT> <Notice> <JMX> <BEA-149512> <JMX Connector Server started at service:jmx:iiop://192.168.1.101:7001/jndi/weblogic.management.mbeanservers.edit.>
+<Sep 15, 2021 6:51:00,919 PM IRDT> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to STANDBY.>
+<Sep 15, 2021 6:51:00,920 PM IRDT> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to STARTING.>
+<Sep 15, 2021 6:51:00,963 PM IRDT> <Notice> <Log Management> <BEA-170036> <The Logging monitoring service timer has started to check for logged message counts every 30 seconds.>
+<Sep 15, 2021 6:51:03,303 PM IRDT> <Warning> <Munger> <BEA-2156203> <A version attribute was not found in element "ejb-jar" in the deployment descriptor zip:D:/run/ws/tech/mavenbased-ear-product/target/mavenbased-ear-product-0.0.1-SNAPSHOT/mavenbased-ejb-samples-0.0.1-SNAPSHOT.jar!/META-INF/ejb-jar.xml. A version attribute is required, but this version of the WebLogic Server will assume that the latest version is used. Future versions of WebLogic Server will reject descriptors that do not specify the Java EE version. To eliminate this warning, add an appropriate "version=" to element "ejb-jar" in the deployment descriptor.>
+<Sep 15, 2021 6:51:03,565 PM IRDT> <Warning> <Munger> <BEA-2156203> <A version attribute was not found in element "web-app" in the deployment descriptor D:\run\ws\tech\mavenbased-ear-product\target\mavenbased-ear-product-0.0.1-SNAPSHOT\mavenbased-rest-samples-0.0.1-SNAPSHOT.war/WEB-INF/web.xml. A version attribute is required, but this version of the WebLogic Server will assume that the latest version is used. Future versions of WebLogic Server will reject descriptors that do not specify the Java EE version. To eliminate this warning, add an appropriate "version=" to element "web-app" in the deployment descriptor.>
+<Sep 15, 2021 6:51:04,708 PM IRDT> <Warning> <JAXRSIntegration> <BEA-2192509> <Changing servlet class from com.sun.jersey.spi.container.servlet.ServletContainer (web.xml) to org.glassfish.jersey.servlet.ServletContainer.>
+filterConfig.getInitParameter() : 1000
+filterConfig.getServletContext().getInitParameter() : null
+<Sep 15, 2021 6:51:10,755 PM IRDT> <Notice> <Log Management> <BEA-170027> <The server has successfully established a connection with the Domain level Diagnostic Service.>
+<Sep 15, 2021 6:51:10,911 PM IRDT> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to ADMIN.>
+<Sep 15, 2021 6:51:10,934 PM IRDT> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to RESUMING.>
+<Sep 15, 2021 6:51:11,007 PM IRDT> <Notice> <Server> <BEA-002613> <Channel "Default[1]" is now listening on 127.0.0.1:7001 for protocols iiop, t3, ldap, snmp, http.>
+<Sep 15, 2021 6:51:11,007 PM IRDT> <Notice> <Server> <BEA-002613> <Channel "Default[2]" is now listening on 0:0:0:0:0:0:0:1:7001 for protocols iiop, t3, ldap, snmp, http.>
+<Sep 15, 2021 6:51:11,008 PM IRDT> <Warning> <Server> <BEA-002611> <The hostname "DESKTOP-PIRVI54", maps to multiple IP addresses: 192.168.1.101, fe80:0:0:0:2847:427b:d4cc:af82%10.>
+<Sep 15, 2021 6:51:11,009 PM IRDT> <Notice> <Server> <BEA-002613> <Channel "Default" is now listening on 192.168.1.101:7001 for protocols iiop, t3, ldap, snmp, http.>
+<Sep 15, 2021 6:51:11,009 PM IRDT> <Notice> <Server> <BEA-002613> <Channel "Default[1]" is now listening on 127.0.0.1:7001 for protocols iiop, t3, ldap, snmp, http.>
+<Sep 15, 2021 6:51:11,009 PM IRDT> <Notice> <WebLogicServer> <BEA-000331> <Started the WebLogic Server Administration Server "AdminServer" for domain "base_domain" running in development mode.>
+<Sep 15, 2021 6:51:11,014 PM IRDT> <Notice> <Server> <BEA-002613> <Channel "Default[2]" is now listening on 0:0:0:0:0:0:0:1:7001 for protocols iiop, t3, ldap, snmp, http.>
+<Sep 15, 2021 6:51:11,016 PM IRDT> <Notice> <WebLogicServer> <BEA-000360> <The server started in RUNNING mode.>
+<Sep 15, 2021 6:51:11,019 PM IRDT> <Notice> <Server> <BEA-002613> <Channel "Default" is now listening on 192.168.1.101:7001 for protocols iiop, t3, ldap, snmp, http.>
+<Sep 15, 2021 6:51:11,025 PM IRDT> <Notice> <WebLogicServer> <BEA-000365> <Server state changed to RUNNING.>
+<Sep 15, 2021 6:51:20,570 PM IRDT> <Notice> <JMX> <BEA-149535> <JMX Resiliency Activity Server=AdminServer : Initializing callbacks>
+<Sep 15, 2021 6:51:20,577 PM IRDT> <Notice> <JMX> <BEA-149535> <JMX Resiliency Activity Server=AdminServer : Added MBeanServerConnection in DomainRuntimeServiceMBean >
+<Sep 15, 2021 6:51:20,578 PM IRDT> <Notice> <JMX> <BEA-149535> <JMX Resiliency Activity Server=AdminServer : Callback is done>
+<Sep 15, 2021 6:51:20,580 PM IRDT> <Notice> <JMX> <BEA-149535> <JMX Resiliency Activity Server=AdminServer : Connection already exists for the server. Did not attempt to connect to the server>
+<Sep 15, 2021 6:51:20,668 PM IRDT> <Notice> <JMX> <BEA-149535> <JMX Resiliency Activity Server=All Servers : Resolving connection list DomainRuntimeServiceMBean>
+id : 1 -  currentThread Name : [ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)' - currentThread Id : 25
+MANDATORY id : 1 -  currentThread Name : [ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)' - currentThread Id : 25
+REQUIRED id : 1 -  currentThread Name : [ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)' - currentThread Id : 25
+REQUIRES_NEW id : 1 -  currentThread Name : [ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)' - currentThread Id : 25
+SUPPORTS id : 1 -  currentThread Name : [ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)' - currentThread Id : 25
+NOT_SUPPORTED id : 1 -  currentThread Name : [ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)' - currentThread Id : 25
+<Sep 15, 2021 6:51:25,707 PM IRDT> <Error> <HTTP> <BEA-101017> <[ServletContext@360431543[app:mavenbased-ear-product-0.0.1-SNAPSHOT module:/rest path:null spec-version:3.1], request: weblogic.servlet.internal.ServletRequestImpl@56ccffe7[
+GET /rest/hsports/api/mt/addRequest/1 HTTP/1.1
+Connection: keep-alive
+Cache-Control: max-age=0
+sec-ch-ua: "Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93"
+sec-ch-ua-mobile: ?0
+sec-ch-ua-platform: "Windows"
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: cross-site
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+Sec-Fetch-Dest: document
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-US,en;q=0.9
+
+]] Root cause of ServletException.
+javax.ejb.EJBException: Exception enforcing EJB transaction policy: : java.rmi.RemoteException: [EJB:011264]Method sendMessagesByNEVER(java.lang.Long) is marked TX_NEVER, but was called within a transaction.
+        at weblogic.ejb.container.internal.TransactionPolicy.enforceTransactionPolicy(TransactionPolicy.java:73)
+        at weblogic.ejb.container.internal.InvocationWrapper.enforceTransactionPolicy(InvocationWrapper.java:320)
+        at weblogic.ejb.container.internal.InvocationWrapper.enforceTransactionPolicy(InvocationWrapper.java:308)
+        at weblogic.ejb.container.internal.BaseLocalObject.preInvoke(BaseLocalObject.java:85)
+        at weblogic.ejb.container.internal.BaseLocalObject.__WL_preInvoke(BaseLocalObject.java:69)
+        at weblogic.ejb.container.internal.SessionLocalMethodInvoker.invoke(SessionLocalMethodInvoker.java:22)
+        at ir.amin.mavenbased.ejb.samples.concurrency.ChildThread_5znzuo_ChildThreadLocalImpl.sendMessagesByNEVER(Unknown Source)
+        at ir.amin.mavenbased.ejb.samples.concurrency.ParentThread.preparedMessage(ParentThread.java:28)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at com.bea.core.repackaged.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:333)
+        at com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+        at com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+        at com.oracle.pitchfork.intercept.MethodInvocationInvocationContext.proceed(MethodInvocationInvocationContext.java:101)
+        at com.oracle.pitchfork.intercept.JeeInterceptorInterceptor.invoke(JeeInterceptorInterceptor.java:101)
+        at com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+        at com.oracle.pitchfork.intercept.MethodInvocationInvocationContext.proceed(MethodInvocationInvocationContext.java:101)
+        at org.jboss.weld.ejb.AbstractEJBRequestScopeActivationInterceptor.aroundInvoke(AbstractEJBRequestScopeActivationInterceptor.java:64)
+        at org.jboss.weld.ejb.SessionBeanInterceptor.aroundInvoke(SessionBeanInterceptor.java:52)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at com.oracle.pitchfork.intercept.JeeInterceptorInterceptor.invoke(JeeInterceptorInterceptor.java:94)
+        at com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+        at com.bea.core.repackaged.springframework.aop.support.DelegatingIntroductionInterceptor.doProceed(DelegatingIntroductionInterceptor.java:133)
+        at com.bea.core.repackaged.springframework.aop.support.DelegatingIntroductionInterceptor.invoke(DelegatingIntroductionInterceptor.java:121)
+        at com.bea.core.repackaged.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+        at com.bea.core.repackaged.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:213)
+        at com.sun.proxy.$Proxy227.preparedMessage(Unknown Source)
+        at ir.amin.mavenbased.ejb.samples.concurrency.ParentThread_c55lgo_NoIntfViewImpl.__WL_invoke(Unknown Source)
+        at weblogic.ejb.container.internal.SessionLocalMethodInvoker.invoke(SessionLocalMethodInvoker.java:33)
+        at ir.amin.mavenbased.ejb.samples.concurrency.ParentThread_c55lgo_NoIntfViewImpl.preparedMessage(Unknown Source)
+        at ir.amin.mavenbased.rest.samples.controllers.MultiThreadController.addRequest(MultiThreadController.java:22)
+        at ir.amin.mavenbased.rest.samples.controllers.MultiThreadController$Proxy$_$$_WeldClientProxy.addRequest(Unknown Source)
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.lang.reflect.Method.invoke(Method.java:498)
+        at org.glassfish.jersey.server.model.internal.ResourceMethodInvocationHandlerFactory$1.invoke(ResourceMethodInvocationHandlerFactory.java:81)
+        at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher$1.run(AbstractJavaResourceMethodDispatcher.java:144)
+        at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.invoke(AbstractJavaResourceMethodDispatcher.java:161)
+        at org.glassfish.jersey.server.model.internal.JavaResourceMethodDispatcherProvider$ResponseOutInvoker.doDispatch(JavaResourceMethodDispatcherProvider.java:160)
+        at org.glassfish.jersey.server.model.internal.AbstractJavaResourceMethodDispatcher.dispatch(AbstractJavaResourceMethodDispatcher.java:99)
+        at org.glassfish.jersey.server.model.ResourceMethodInvoker.invoke(ResourceMethodInvoker.java:389)
+        at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:347)
+        at org.glassfish.jersey.server.model.ResourceMethodInvoker.apply(ResourceMethodInvoker.java:102)
+        at org.glassfish.jersey.server.ServerRuntime$2.run(ServerRuntime.java:326)
+        at org.glassfish.jersey.internal.Errors$1.call(Errors.java:271)
+        at org.glassfish.jersey.internal.Errors$1.call(Errors.java:267)
+        at org.glassfish.jersey.internal.Errors.process(Errors.java:315)
+        at org.glassfish.jersey.internal.Errors.process(Errors.java:297)
+        at org.glassfish.jersey.internal.Errors.process(Errors.java:267)
+        at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:317)
+        at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:305)
+        at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:1154)
+        at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:473)
+        at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:427)
+        at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:388)
+        at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:341)
+        at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:228)
+        at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:286)
+        at weblogic.servlet.internal.StubSecurityHelper$ServletServiceAction.run(StubSecurityHelper.java:260)
+        at weblogic.servlet.internal.StubSecurityHelper.invokeServlet(StubSecurityHelper.java:137)
+        at weblogic.servlet.internal.ServletStubImpl.execute(ServletStubImpl.java:350)
+        at weblogic.servlet.internal.TailFilter.doFilter(TailFilter.java:25)
+        at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:78)
+        at weblogic.servlet.internal.RequestEventsFilter.doFilter(RequestEventsFilter.java:32)
+        at weblogic.servlet.internal.FilterChainImpl.doFilter(FilterChainImpl.java:78)
+        at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.wrapRun(WebAppServletContext.java:3701)
+        at weblogic.servlet.internal.WebAppServletContext$ServletInvocationAction.run(WebAppServletContext.java:3667)
+        at weblogic.security.acl.internal.AuthenticatedSubject.doAs(AuthenticatedSubject.java:326)
+        at weblogic.security.service.SecurityManager.runAsForUserCode(SecurityManager.java:197)
+        at weblogic.servlet.provider.WlsSecurityProvider.runAsForUserCode(WlsSecurityProvider.java:203)
+        at weblogic.servlet.provider.WlsSubjectHandle.run(WlsSubjectHandle.java:71)
+        at weblogic.servlet.internal.WebAppServletContext.doSecuredExecute(WebAppServletContext.java:2443)
+        at weblogic.servlet.internal.WebAppServletContext.securedExecute(WebAppServletContext.java:2291)
+        at weblogic.servlet.internal.WebAppServletContext.execute(WebAppServletContext.java:2269)
+        at weblogic.servlet.internal.ServletRequestImpl.runInternal(ServletRequestImpl.java:1703)
+        at weblogic.servlet.internal.ServletRequestImpl.run(ServletRequestImpl.java:1663)
+        at weblogic.servlet.provider.ContainerSupportProviderImpl$WlsRequestExecutor.run(ContainerSupportProviderImpl.java:272)
+        at weblogic.invocation.ComponentInvocationContextManager._runAs(ComponentInvocationContextManager.java:352)
+        at weblogic.invocation.ComponentInvocationContextManager.runAs(ComponentInvocationContextManager.java:337)
+        at weblogic.work.LivePartitionUtility.doRunWorkUnderContext(LivePartitionUtility.java:57)
+        at weblogic.work.PartitionUtility.runWorkUnderContext(PartitionUtility.java:41)
+        at weblogic.work.SelfTuningWorkManagerImpl.runWorkUnderContext(SelfTuningWorkManagerImpl.java:644)
+        at weblogic.work.ExecuteThread.execute(ExecuteThread.java:415)
+        at weblogic.work.ExecuteThread.run(ExecuteThread.java:355)
+
+        at weblogic.ejb.container.internal.EJBRuntimeUtils.asEJBException(EJBRuntimeUtils.java:86)
+        at weblogic.ejb.container.internal.BaseLocalObject.preInvoke(BaseLocalObject.java:88)
+        at weblogic.ejb.container.internal.BaseLocalObject.__WL_preInvoke(BaseLocalObject.java:69)
+        at weblogic.ejb.container.internal.SessionLocalMethodInvoker.invoke(SessionLocalMethodInvoker.java:22)
+        at ir.amin.mavenbased.ejb.samples.concurrency.ChildThread_5znzuo_ChildThreadLocalImpl.sendMessagesByNEVER(Unknown Source)
+        Truncated. see log file for complete stacktrace
+Caused By: java.rmi.RemoteException: [EJB:011264]Method sendMessagesByNEVER(java.lang.Long) is marked TX_NEVER, but was called within a transaction.
+        at weblogic.ejb.container.internal.TransactionPolicy.enforceTransactionPolicy(TransactionPolicy.java:73)
+        at weblogic.ejb.container.internal.InvocationWrapper.enforceTransactionPolicy(InvocationWrapper.java:320)
+        at weblogic.ejb.container.internal.InvocationWrapper.enforceTransactionPolicy(InvocationWrapper.java:308)
+        at weblogic.ejb.container.internal.BaseLocalObject.preInvoke(BaseLocalObject.java:85)
+        at weblogic.ejb.container.internal.BaseLocalObject.__WL_preInvoke(BaseLocalObject.java:69)
+        Truncated. see log file for complete stacktrace
+>
+<Sep 15, 2021 6:51:31,491 PM IRDT> <Warning> <Socket> <BEA-000449> <Closing the socket, as no data read from it on 0:0:0:0:0:0:0:1:61,983 during the configured idle timeout of 5 seconds.>
+id : 1 -  currentThread Name : [ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)' - currentThread Id : 25
+Asynchronous id : 1 -  currentThread Name : [ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)' - currentThread Id : 25
+id : 1 -  currentThread Name : [ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)' - currentThread Id : 25
+future.isDone : false
+<Sep 15, 2021 6:52:06,490 PM IRDT> <Warning> <Socket> <BEA-000449> <Closing the socket, as no data read from it on 0:0:0:0:0:0:0:1:52,206 during the configured idle timeout of 5 seconds.>
+CallableReportTask :  currentThread Name : [ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)' - currentThread Id : 25
+id : 1 -  currentThread Name : [ACTIVE] ExecuteThread: '0' for queue: 'weblogic.kernel.Default (self-tuning)' - currentThread Id : 25
+RunnableReportTask :  currentThread Name : DaemonConcurrentThread: '1' of 'DefaultManagedThreadFactory' - currentThread Id : 63
+<Sep 15, 2021 6:52:26,491 PM IRDT> <Warning> <Socket> <BEA-000449> <Closing the socket, as no data read from it on 0:0:0:0:0:0:0:1:57,497 during the configured idle timeout of 5 seconds.>
