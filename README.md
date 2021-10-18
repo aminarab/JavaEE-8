@@ -52,7 +52,7 @@ JPA samples
 
 http://localhost:7001/rest/hsports/api/car/sample POST <br />
 http://localhost:7001/rest/hsports/api/car/1 GET , DELETE<br />
-http://localhost:7001/rest/hsports/api/car/all
+http://localhost:7001/rest/hsports/api/car/all <br />
 http://localhost:7001/rest/hsports/api/car/update
 
 JMS samples
