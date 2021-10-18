@@ -1,0 +1,1 @@
+https://mvnrepository.com/artifact/org.apache.openejb/javaee-api
