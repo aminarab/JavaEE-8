@@ -1,9 +1,0 @@
-D:\run\ws\tech\mavenbased-rest-samples\src\main\java\ir\amin\mavenbased\rest\samples\SampleRESTApplication.java
-D:\run\ws\tech\mavenbased-rest-samples\src\main\java\ir\amin\mavenbased\rest\samples\controllers\InventoryItemEndpoint.java
-D:\run\ws\tech\mavenbased-rest-samples\src\main\java\ir\amin\mavenbased\rest\samples\InventoryItem.java
-D:\run\ws\tech\mavenbased-rest-samples\src\main\java\ir\amin\mavenbased\rest\samples\controllers\ScopesController.java
-D:\run\ws\tech\mavenbased-rest-samples\src\main\java\ir\amin\mavenbased\rest\samples\scopes\ScopePOJO.java
-D:\run\ws\tech\mavenbased-rest-samples\src\main\java\ir\amin\mavenbased\rest\samples\controllers\MultiThreadController.java
-D:\run\ws\tech\mavenbased-rest-samples\src\main\java\ir\amin\mavenbased\rest\samples\scopes\SessionScopePOJO.java
-D:\run\ws\tech\mavenbased-rest-samples\src\main\java\ir\amin\mavenbased\rest\samples\scopes\RequestScopePOJO.java
-D:\run\ws\tech\mavenbased-rest-samples\src\main\java\ir\amin\mavenbased\rest\samples\scopes\ApplicationScopePOJO.java
