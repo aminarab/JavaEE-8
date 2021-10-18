@@ -41,7 +41,7 @@ http://localhost:7001/rest/hsports/api/mt/addRunnableRequest/1
 
 Bean qualifier samples
 
-http://localhost:7001/rest/hsports/api/qualifier/calculator/sum?a=2&b=7
+http://localhost:7001/rest/hsports/api/qualifier/calculator/sum?a=2&b=7<br />
 http://localhost:7001/rest/hsports/api/qualifier/shapeName
 
 Batch samples
@@ -50,7 +50,7 @@ http://localhost:7001/rest/hsports/api/batch/executeBatch?name=simpleChunk
 
 JPA samples
 
-http://localhost:7001/rest/hsports/api/car/sample [POST]
+http://localhost:7001/rest/hsports/api/car/sample POST <br />
 http://localhost:7001/rest/hsports/api/car/1 GET , DELETE
 http://localhost:7001/rest/hsports/api/car/all
 http://localhost:7001/rest/hsports/api/car/update
