@@ -10,6 +10,7 @@ import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
 import ir.amin.mavenbased.jpa.samples.JMSService;
+import ir.amin.mavenbased.jpa.samples.JMSSessionBean;
 
 @RequestScoped
 @Path("/jms")
@@ -20,10 +21,14 @@ public class JMSController {
 	@Inject
 	JMSService jmsService;
 	
+	@Inject
+	JMSSessionBean jmsSessionBean;
+	
 	@GET
 	@Path("/Send")
 	public Response send(@QueryParam("name") final String name) {
 		jmsService.send(name);
+		jmsSessionBean.send(name);
 		return Response.noContent().build();
 	}
 

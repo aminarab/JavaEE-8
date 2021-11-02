@@ -10,6 +10,7 @@ public class DebugExceptionMapper implements ExceptionMapper<Exception> {
 
     @Override
     public Response toResponse(Exception exception) {
+    	System.out.println("printStackTrace in DebugExceptionMapper " );
         exception.printStackTrace();
         return Response.serverError().entity(exception.getMessage()).build();
     } 

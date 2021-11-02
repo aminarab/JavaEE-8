@@ -12,6 +12,7 @@ import ir.amin.mavenbased.rest.samples.controllers.BatchController;
 import ir.amin.mavenbased.rest.samples.controllers.CarController;
 import ir.amin.mavenbased.rest.samples.controllers.InventoryItemEndpoint;
 import ir.amin.mavenbased.rest.samples.controllers.MultiThreadController;
+import ir.amin.mavenbased.rest.samples.controllers.SchedulerController;
 import ir.amin.mavenbased.rest.samples.controllers.ScopesController;
 import ir.amin.mavenbased.rest.samples.qualifier.QualifierController;
 
@@ -39,5 +40,6 @@ public class SampleRESTApplication extends Application {
 		resources.add(JMSController.class);
 		resources.add(JTAController.class);
 		resources.add(InterceptorController.class);
+		resources.add(SchedulerController.class);
 	}
 }
