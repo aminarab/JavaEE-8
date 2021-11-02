@@ -29,7 +29,7 @@ public class CarDAOImpl implements CarDAO {
 	EntityManager entityManager;
 
 	public void insertSampleData() throws ParseException {
-		
+
 		/*
 		 * cars
 		 */
@@ -38,47 +38,46 @@ public class CarDAOImpl implements CarDAO {
 
 		Car benz = new Car();
 		benz.setModel(CarModel.BENZ);
-		
+
 		Car audi = new Car();
 		audi.setModel(CarModel.AUDI);
-		
+
 		Car ford = new Car();
 		ford.setModel(CarModel.FORD);
-		
-		
+
 		/*
 		 * persons
 		 */
 		Person amin = new Person();
 		amin.setName("Amin");
-		
+
 		Person behzad = new Person();
 		behzad.setName("Behzad");
-		
+
 		Person saman = new Person();
 		saman.setName("Saman");
-		
+
 		/*
 		 * documents
 		 */
 		Document document1 = new Document();
 		document1.setProductionYear(new SimpleDateFormat("dd/MM/yyyy").parse("31/12/2010"));
-		
+
 		Document document2 = new Document();
 		document2.setProductionYear(new SimpleDateFormat("dd/MM/yyyy").parse("31/12/2010"));
-		
+
 		Document document3 = new Document();
 		document3.setProductionYear(new SimpleDateFormat("dd/MM/yyyy").parse("15/01/2015"));
-		
+
 		Document document4 = new Document();
 		document4.setProductionYear(new SimpleDateFormat("dd/MM/yyyy").parse("15/01/2020"));
-		
+
 		/*
 		 * insurances
 		 */
 		Insurance insurance1 = new Insurance();
 		insurance1.setIssueDate(new SimpleDateFormat("dd/MM/yyyy").parse("31/12/2011"));
-		
+
 		Insurance insurance2 = new Insurance();
 		insurance2.setIssueDate(new SimpleDateFormat("dd/MM/yyyy").parse("31/12/2015"));
 
@@ -87,28 +86,24 @@ public class CarDAOImpl implements CarDAO {
 
 		Insurance insurance4 = new Insurance();
 		insurance4.setIssueDate(new SimpleDateFormat("dd/MM/yyyy").parse("31/12/2021"));
-		
-		
+
 		/*
-		 * Complete Car entities as relationship owner 
+		 * Complete Car entities as relationship owner
 		 */
 		bmw.setDocument(document1);
 		benz.setDocument(document2);
 		audi.setDocument(document3);
 		ford.setDocument(document4);
-		
-		
+
 		Set<Person> bmwOwners = new HashSet<Person>();
 		bmwOwners.add(saman);
 		bmwOwners.add(behzad);
 		bmw.setOwners(bmwOwners);
-		
 
 		Set<Person> benzOwners = new HashSet<Person>();
 		benzOwners.add(saman);
 		benzOwners.add(amin);
 		benz.setOwners(benzOwners);
-		
 
 		Set<Person> audiOwners = new HashSet<Person>();
 		audiOwners.add(saman);
@@ -116,14 +111,12 @@ public class CarDAOImpl implements CarDAO {
 		audiOwners.add(amin);
 		audi.setOwners(audiOwners);
 
-
 		Set<Person> fordOwners = new HashSet<Person>();
 		fordOwners.add(amin);
 		ford.setOwners(fordOwners);
-		
+
 		/*
-		 * We need persist document before car (One to One relation owner)
-		 * OR
+		 * We need persist document before car (One to One relation owner) OR
 		 * use @OneToOne(cascade = CascadeType.ALL)
 		 */
 //		entityManager.persist(document1);
@@ -132,30 +125,27 @@ public class CarDAOImpl implements CarDAO {
 //		entityManager.persist(document4);
 
 		/*
-		 * We need persist owners before car (One to One relation owner)
-		 * OR
+		 * We need persist owners before car (One to One relation owner) OR
 		 * use @ManyToMany(cascade = CascadeType.ALL)
 		 */
 //		entityManager.persist(amin);
 //		entityManager.persist(behzad);
 //		entityManager.persist(saman);
-		
+
 		insert(bmw);
 		insert(benz);
 		insert(ford);
 		insert(audi);
-		
-		
-		
+
 		insurance1.setCar(bmw);
 		entityManager.persist(insurance1);
-		
+
 		insurance2.setCar(ford);
 		entityManager.persist(insurance2);
-		
+
 		insurance3.setCar(benz);
 		entityManager.persist(insurance3);
-		
+
 		insurance4.setCar(benz);
 		entityManager.persist(insurance4);
 
@@ -208,11 +198,11 @@ public class CarDAOImpl implements CarDAO {
 	}
 
 	public List<Car> findByOwnerName(String name) {
-		TypedQuery<Car> typedQuery = entityManager
-				.createQuery("select c from Car c JOIN c.owners o where o.name like CONCAT('%', :name, '%')", Car.class);
+		TypedQuery<Car> typedQuery = entityManager.createQuery(
+				"select c from Car c JOIN c.owners o where o.name like CONCAT('%', :name, '%')", Car.class);
 		typedQuery.setParameter("name", name);
 		return typedQuery.getResultList();
-		
+
 	}
 
 	public List<Car> findByProductionYear(Integer productionYear) {
@@ -221,11 +211,10 @@ public class CarDAOImpl implements CarDAO {
 		Calendar cal = Calendar.getInstance();
 		cal.setTime(targetYearStart);
 		cal.add(Calendar.YEAR, 1);
-		
-		
-		
+
 		Query nativeQuery = entityManager.createNativeQuery(
-				"select c.* from Car c join OF1DOC doc on c.doc_id=doc.OF1001ID where doc.OF1001PROYEAR between ?1 and ?2", Car.class);
+				"select c.* from Car c join OF1DOC doc on c.doc_id=doc.OF1001ID where doc.OF1001PROYEAR between ?1 and ?2",
+				Car.class);
 		nativeQuery.setParameter(1, targetYearStart);
 		nativeQuery.setParameter(2, cal.getTime());
 		List<Car> resultList = nativeQuery.getResultList();

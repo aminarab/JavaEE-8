@@ -1,9 +1,7 @@
 package ir.amin.mavenbased.jpa.samples;
 
-import javax.annotation.PreDestroy;
 import javax.annotation.Resource;
 import javax.ejb.AfterCompletion;
-import javax.ejb.Remove;
 import javax.inject.Inject;
 import javax.interceptor.AroundInvoke;
 import javax.interceptor.InvocationContext;
@@ -17,16 +15,19 @@ public class InterceptorSample {
 	@Inject
 	InterceptDAO interceptDAO;
 
+//	@Inject
+//	JMSService jmsService;
+	
 	@Inject
-	JMSService jmsService;
+	JMSSessionBean jmsSessionBean;
 
-//	@Resource(mappedName="java:comp/TransactionSynchronizationRegistry")
+//	@Inject
+//	TransactionMessage transactionMessage;
+
+	//	@Resource(mappedName="java:comp/TransactionSynchronizationRegistry")
 	@Resource(lookup="java:comp/TransactionSynchronizationRegistry")
 	TransactionSynchronizationRegistry tsr;
-	
-	@Inject
-	TransactionMessage transactionMessage;
-	
+		
 	@AroundInvoke
 	public Object methodInterceptor(InvocationContext ctx) throws Exception {
 		 
@@ -36,7 +37,7 @@ public class InterceptorSample {
 		transactionLog.setTransactionName("methodInterceptor -> " +called.toString());
 
 		interceptDAO.insertTransactionLog(transactionLog);
-		transactionMessage.setMessage(parameterString(ctx));
+//		transactionMessage.setMessage(parameterString(ctx));
 		
 		Object proceed = null;
 		try {
@@ -50,7 +51,8 @@ public class InterceptorSample {
 		
 		
 		if(tsr.getTransactionStatus() == Status.STATUS_ACTIVE) {
-//			jmsService.send(called.toString());			
+//			jmsService.send(called.toString());
+			jmsSessionBean.send(called.toString());
 		}
 
 //		interceptDAO.insertTransactionLog(transactionLog);

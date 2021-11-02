@@ -15,23 +15,23 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
-@Table(name="OF1DOC")
+@Table(name = "OF1DOC")
 public class Document {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name="OF1001ID")
+	@Column(name = "OF1001ID")
 	private Long id;
-	
+
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd@HH:mm:ss.SSSZ")
-	@Column(name="OF1001PROYEAR")
+	@Column(name = "OF1001PROYEAR")
 	private Date productionYear;
-	
+
 	@JsonBackReference
 	@JsonbTransient
 	@OneToOne(mappedBy = "document")
 	private Car car;
-	
+
 	public Long getId() {
 		return id;
 	}
@@ -47,7 +47,7 @@ public class Document {
 	public void setProductionYear(Date productionYear) {
 		this.productionYear = productionYear;
 	}
-	
+
 	public Car getCar() {
 		return car;
 	}
@@ -58,7 +58,7 @@ public class Document {
 
 	@Override
 	public String toString() {
-		return "Document=["+"id : "+id+" productionYear : "+productionYear+"]";
+		return "Document=[" + "id : " + id + " productionYear : " + productionYear + "]";
 	}
-	
+
 }

@@ -29,12 +29,10 @@ public class Insurance {
 	@Column
 	private Date issueDate;
 
-
-
 	@JsonBackReference
 	@JsonbTransient
 	@ManyToOne
-	@JoinColumn(name = "car_id" ,  referencedColumnName = "id" , nullable = false)
+	@JoinColumn(name = "car_id", referencedColumnName = "id", nullable = false)
 	private Car car;
 
 	public Long getId() {

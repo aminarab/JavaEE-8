@@ -9,7 +9,7 @@ import ir.amin.mavenbased.jpa.samples.entity.Deposit;
 import ir.amin.mavenbased.jpa.samples.entity.TransactionLog;
 
 @Stateless
-public class InterceptDAOImpl implements InterceptDAO{
+public class InterceptDAOImpl implements InterceptDAO {
 
 	@PersistenceContext(unitName = "jeeHibernateSamples")
 	EntityManager entityManager;

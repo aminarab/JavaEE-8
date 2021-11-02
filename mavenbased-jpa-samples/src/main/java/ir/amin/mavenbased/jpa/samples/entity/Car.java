@@ -48,7 +48,7 @@ public class Car {
 	private List<Insurance> insurances;
 
 	@JsonIgnoreProperties("cars")
-	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@ManyToMany(cascade = {CascadeType.MERGE , CascadeType.PERSIST}, fetch = FetchType.EAGER)
 	@JoinTable(name = "Car_Person", joinColumns = @JoinColumn(name = "car_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "person_id", referencedColumnName = "id"))
 	private Set<Person> owners;
 

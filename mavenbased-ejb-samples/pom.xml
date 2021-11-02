@@ -6,6 +6,8 @@
 	<artifactId>mavenbased-ejb-samples</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
+	
+        <quartz.version>2.2.1</quartz.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
@@ -18,6 +20,19 @@
 			<version>8.0</version>
 			<scope>provided</scope>
 		</dependency>
+
+
+		<!-- Quartz -->
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>${quartz.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz-jobs</artifactId>
+            <version>${quartz.version}</version>
+        </dependency>
 
 		<dependency>
 			<groupId>ir.amin.mavenbased.jar.samples</groupId>

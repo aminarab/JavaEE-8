@@ -16,3 +16,5 @@ https://www.baeldung.com/jpa-one-to-one
 https://stackoverflow.com/questions/43716068/invalid-syntax-error-type-myisam-in-ddl-generated-by-hibernate/43720565
 
 https://stackoverflow.com/questions/31428434/weblogic-error-caused-by-weblogic-transaction-internal-appsetrollbackonlyexcep
+
+https://thorben-janssen.com/hibernate-tips-the-best-way-to-remove-entities-from-a-many-to-many-association/
